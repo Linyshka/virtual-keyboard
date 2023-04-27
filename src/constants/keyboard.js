@@ -332,10 +332,10 @@ const keyboardKeys = [
   {
     code: "I",
     ru: {
-      down: "ё",
-      up: "Ё",
-      caps: "Ё",
-      shiftCaps: "ё",
+      down: "ш",
+      up: "Ш",
+      caps: "Ш",
+      shiftCaps: "ш",
     },
     en: {
       down: "i",
@@ -842,16 +842,16 @@ const keyboardKeys = [
   {
     code: "MetaLeft",
     ru: {
-      down: "\u269D",
-      up: "\u269D",
-      caps: "\u269D",
-      shiftCaps: "\u269D",
+      down: "Win",
+      up: "Win",
+      caps: "Win",
+      shiftCaps: "Win",
     },
     en: {
-      down: "\u269D",
-      up: "\u269D",
-      caps: "\u269D",
-      shiftCaps: "\u269D",
+      down: "Win",
+      up: "Win",
+      caps: "Win",
+      shiftCaps: "Win",
     },
   },
   {

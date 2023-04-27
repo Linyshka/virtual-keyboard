@@ -1,3 +1,3 @@
-import { initKeyboard } from "./scripts/start.js";
+import initKeyboard from "./scripts/start.js";
 
 initKeyboard();

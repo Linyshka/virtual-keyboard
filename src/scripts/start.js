@@ -1,6 +1,6 @@
 import keyboardKeys from "../constants/keyboard.js";
 
-export function createKey(lang) {
+function createKey(lang) {
   const key = document.createElement("div");
   key.classList.add(`${lang}`);
 
@@ -20,14 +20,14 @@ export function createKey(lang) {
   return key;
 }
 
-export function createKeysRow() {
+function createKeysRow() {
   const keyboardKeyDiv = document.createElement("div");
   keyboardKeyDiv.classList.add("keyboard__key");
   keyboardKeyDiv.append(createKey("en"), createKey("ru"));
   return keyboardKeyDiv;
 }
 
-export function fillKey(index, key, lang) {
+function fillKey(index, key, lang) {
   const langKey = key.querySelector(`.${lang}`);
   const caseDown = langKey.querySelector(".down");
   const caseUp = langKey.querySelector(".up");
@@ -49,7 +49,7 @@ export function fillKey(index, key, lang) {
   key.classList.add(keyboardKeys[index].code);
 }
 
-export function initKeyboard() {
+export default function initKeyboard() {
   const wrapper = document.createElement("div");
   wrapper.classList.add("wrapper");
 
