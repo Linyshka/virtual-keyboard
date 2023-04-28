@@ -2,6 +2,7 @@ import initKeyboard from "./scripts/start.js";
 import setStartHiddenKeys from "./scripts/hidden-keys.js";
 import virtualKeyBoardClick from "./scripts/virtual-keyboard-click.js";
 import setCase from "./scripts/case.js";
+import { keyDown, keyUp } from "./scripts/real-keyboard-click.js";
 
 initKeyboard();
 
@@ -12,7 +13,8 @@ const currentState = {
   language: "",
   isCapsPress: false,
   isShiftPress: false,
-  isShiftCapsPress: false,
+  isCtrlPress: false,
+  isAltPress: false,
   textIndex: 0,
   currentKey: "",
 };
@@ -45,15 +47,39 @@ document.addEventListener("mouseup", () => {
       if (currentCase === "up") {
         currentState.currentCase = setCase(currentCase, "down", language);
       } else if (currentCase === "shiftCaps") {
+        console.log(1);
         currentState.currentCase = setCase(currentCase, "up", language);
       }
     }
   }
-  if (currentCase === "shiftCaps") {
-    currentState.currentCase = setCase(currentCase, "shiftCaps", language);
-  }
+  // if (currentCase === "shiftCaps") {
+  //   currentState.currentCase = setCase(currentCase, "shiftCaps", language);
+  // }
 });
 
 textarea.addEventListener("click", (e) => {
   currentState.textIndex = e.currentTarget.selectionStart;
 });
+
+document.addEventListener("keydown", (e) => {
+  const newState = keyDown(textarea, e, currentState);
+  currentState.language = newState.language;
+  currentState.currentCase = newState.currentCase;
+  currentState.textIndex = newState.textIndex;
+  currentState.isAltPress = newState.isAltPress;
+  currentState.isCapsPress = newState.isCapsPress;
+  currentState.isCtrlPress = newState.isCtrlPress;
+  currentState.isShiftPress = newState.isShiftPress;
+});
+
+document.addEventListener("keyup", (e) => {
+  const newState = keyUp(e, currentState);
+  currentState.currentCase = newState.currentCase;
+  currentState.isAltPress = newState.isAltPress;
+  currentState.isCapsPress = newState.isCapsPress;
+  currentState.isCtrlPress = newState.isCtrlPress;
+  currentState.isShiftPress = newState.isShiftPress;
+});
+document.onkeydown = (e) => {
+  e.preventDefault();
+};
