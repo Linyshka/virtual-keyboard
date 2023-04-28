@@ -225,7 +225,7 @@ const keyboardKeys = [
     },
   },
   {
-    code: "Q",
+    code: "KeyQ",
     ru: {
       down: "й",
       up: "Й",
@@ -240,7 +240,7 @@ const keyboardKeys = [
     },
   },
   {
-    code: "W",
+    code: "KeyW",
     ru: {
       down: "ц",
       up: "Ц",
@@ -255,7 +255,7 @@ const keyboardKeys = [
     },
   },
   {
-    code: "E",
+    code: "KeyE",
     ru: {
       down: "у",
       up: "У",
@@ -270,7 +270,7 @@ const keyboardKeys = [
     },
   },
   {
-    code: "R",
+    code: "KeyR",
     ru: {
       down: "к",
       up: "К",
@@ -285,7 +285,7 @@ const keyboardKeys = [
     },
   },
   {
-    code: "T",
+    code: "KeyT",
     ru: {
       down: "е",
       up: "Е",
@@ -300,7 +300,7 @@ const keyboardKeys = [
     },
   },
   {
-    code: "Y",
+    code: "KeyY",
     ru: {
       down: "н",
       up: "Н",
@@ -315,7 +315,7 @@ const keyboardKeys = [
     },
   },
   {
-    code: "U",
+    code: "KeyU",
     ru: {
       down: "г",
       up: "Г",
@@ -330,7 +330,7 @@ const keyboardKeys = [
     },
   },
   {
-    code: "I",
+    code: "KeyI",
     ru: {
       down: "ш",
       up: "Ш",
@@ -345,7 +345,7 @@ const keyboardKeys = [
     },
   },
   {
-    code: "O",
+    code: "KeyO",
     ru: {
       down: "щ",
       up: "Щ",
@@ -360,7 +360,7 @@ const keyboardKeys = [
     },
   },
   {
-    code: "P",
+    code: "KeyP",
     ru: {
       down: "з",
       up: "З",
@@ -450,7 +450,7 @@ const keyboardKeys = [
     },
   },
   {
-    code: "A",
+    code: "KeyA",
     ru: {
       down: "ф",
       up: "Ф",
@@ -465,7 +465,7 @@ const keyboardKeys = [
     },
   },
   {
-    code: "S",
+    code: "KeyS",
     ru: {
       down: "ы",
       up: "Ы",
@@ -480,7 +480,7 @@ const keyboardKeys = [
     },
   },
   {
-    code: "D",
+    code: "KeyD",
     ru: {
       down: "в",
       up: "В",
@@ -495,7 +495,7 @@ const keyboardKeys = [
     },
   },
   {
-    code: "F",
+    code: "KeyF",
     ru: {
       down: "а",
       up: "А",
@@ -510,7 +510,7 @@ const keyboardKeys = [
     },
   },
   {
-    code: "G",
+    code: "KeyG",
     ru: {
       down: "п",
       up: "П",
@@ -525,7 +525,7 @@ const keyboardKeys = [
     },
   },
   {
-    code: "H",
+    code: "KeyH",
     ru: {
       down: "р",
       up: "Р",
@@ -540,7 +540,7 @@ const keyboardKeys = [
     },
   },
   {
-    code: "J",
+    code: "KeyJ",
     ru: {
       down: "о",
       up: "О",
@@ -555,7 +555,7 @@ const keyboardKeys = [
     },
   },
   {
-    code: "K",
+    code: "KeyK",
     ru: {
       down: "л",
       up: "Л",
@@ -570,7 +570,7 @@ const keyboardKeys = [
     },
   },
   {
-    code: "L",
+    code: "KeyL",
     ru: {
       down: "д",
       up: "Д",
@@ -645,7 +645,7 @@ const keyboardKeys = [
     },
   },
   {
-    code: "Z",
+    code: "KeyZ",
     ru: {
       down: "я",
       up: "Я",
@@ -660,7 +660,7 @@ const keyboardKeys = [
     },
   },
   {
-    code: "X",
+    code: "KeyX",
     ru: {
       down: "ч",
       up: "Ч",
@@ -675,7 +675,7 @@ const keyboardKeys = [
     },
   },
   {
-    code: "C",
+    code: "KeyC",
     ru: {
       down: "с",
       up: "С",
@@ -690,7 +690,7 @@ const keyboardKeys = [
     },
   },
   {
-    code: "V",
+    code: "KeyV",
     ru: {
       down: "м",
       up: "М",
@@ -705,7 +705,7 @@ const keyboardKeys = [
     },
   },
   {
-    code: "B",
+    code: "KeyB",
     ru: {
       down: "и",
       up: "И",
@@ -720,7 +720,7 @@ const keyboardKeys = [
     },
   },
   {
-    code: "N",
+    code: "KeyN",
     ru: {
       down: "т",
       up: "Т",
@@ -735,7 +735,7 @@ const keyboardKeys = [
     },
   },
   {
-    code: "M",
+    code: "KeyM",
     ru: {
       down: "ь",
       up: "Ь",
