@@ -19,7 +19,7 @@ const currentState = {
   currentKey: "",
 };
 
-if (localStorage.getItem("currLanguage") === null || localStorage.getItem("currLanguage") === "en") {
+if (localStorage.getItem("language") === null || localStorage.getItem("language") === "en") {
   currentState.language = "en";
   setStartHiddenKeys(currentState.language);
 } else {
@@ -52,9 +52,6 @@ document.addEventListener("mouseup", () => {
       }
     }
   }
-  // if (currentCase === "shiftCaps") {
-  //   currentState.currentCase = setCase(currentCase, "shiftCaps", language);
-  // }
 });
 
 textarea.addEventListener("click", (e) => {
@@ -80,6 +77,7 @@ document.addEventListener("keyup", (e) => {
   currentState.isCtrlPress = newState.isCtrlPress;
   currentState.isShiftPress = newState.isShiftPress;
 });
+
 document.onkeydown = (e) => {
   e.preventDefault();
 };
