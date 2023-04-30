@@ -1,4 +1,4 @@
-import { insertChar, deleteChar } from "./generic-function.js";
+import chooseCurrentFunction from "./generic-function.js";
 import setCase from "./case.js";
 import setStartHiddenKeys from "./hidden-keys.js";
 
@@ -61,30 +61,7 @@ export function keyDown(textarea, e, currentState) {
       .querySelector(`.${language}`)
       .querySelector(`.${currentCase}`).innerHTML;
 
-    if (pressedKey.length <= 1 && pressedKey !== "\u269D") {
-      textIndex = insertChar(pressedKey, textIndex, textarea);
-    }
-    if (pressedKey === "Tab") {
-      textIndex = insertChar("    ", textIndex, textarea);
-    }
-    if (pressedKey === "Backspace") {
-      textIndex = deleteChar(true, textIndex, textarea);
-    }
-    if (pressedKey === "Del") {
-      textIndex = deleteChar(false, textIndex, textarea);
-    }
-    if (pressedKey === "Enter") {
-      textIndex = insertChar("\n", textIndex, textarea);
-    }
-    if (pressedKey === "&amp;") {
-      textIndex = insertChar("\u0026", textIndex, textarea);
-    }
-    if (pressedKey === "&lt;") {
-      textIndex = insertChar("\u003C", textIndex, textarea);
-    }
-    if (pressedKey === "&gt;") {
-      textIndex = insertChar("\u003E", textIndex, textarea);
-    }
+    textIndex = chooseCurrentFunction(pressedKey, textIndex, textarea);
 
     keys.forEach((key) => {
       if (key.classList[1] === e.code && e.code === "CapsLock") {

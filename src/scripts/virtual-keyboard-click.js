@@ -1,6 +1,6 @@
 import setCase from "./case.js";
 import setStartHiddenKeys from "./hidden-keys.js";
-import { insertChar, deleteChar } from "./generic-function.js";
+import chooseCurrentFunction from "./generic-function.js";
 
 export default function virtualKeyBoardClick(textarea, key, e, currentState) {
   let {
@@ -50,9 +50,11 @@ export default function virtualKeyBoardClick(textarea, key, e, currentState) {
     if (document.querySelector(".AltLeft").classList[2] === "active") {
       if (language === "en") {
         language = setStartHiddenKeys("ru");
+        currentCase = setCase(currentCase, currentCase, language);
         localStorage.setItem("language", language);
       } else {
         language = setStartHiddenKeys("en");
+        currentCase = setCase(currentCase, currentCase, language);
         localStorage.setItem("language", language);
       }
     }
@@ -62,30 +64,8 @@ export default function virtualKeyBoardClick(textarea, key, e, currentState) {
   const keyValue = currentKey.querySelector(`.${language}`)
     .querySelector(`.${currentCase}`).innerHTML;
 
-  if (keyValue.length <= 1 && keyValue !== "\u269D") {
-    textIndex = insertChar(keyValue, textIndex, textarea);
-  }
-  if (keyValue === "Backspace") {
-    textIndex = deleteChar(true, textIndex, textarea);
-  }
-  if (keyValue === "Del") {
-    textIndex = deleteChar(false, textIndex, textarea);
-  }
-  if (keyValue === "Tab") {
-    textIndex = insertChar("    ", textIndex, textarea);
-  }
-  if (keyValue === "Enter") {
-    textIndex = insertChar("\n", textIndex, textarea);
-  }
-  if (keyValue === "&amp;") {
-    textIndex = insertChar("\u0026", textIndex, textarea);
-  }
-  if (keyValue === "&lt;") {
-    textIndex = insertChar("\u003C", textIndex, textarea);
-  }
-  if (keyValue === "&gt;") {
-    textIndex = insertChar("\u003E", textIndex, textarea);
-  }
+  textIndex = chooseCurrentFunction(keyValue, textIndex, textarea);
+
   return {
     currentCase,
     language,
