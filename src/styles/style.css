@@ -25,6 +25,7 @@ body {
   width: 85%;
   height: 12.3rem;
   font-size: 1.2rem;
+  resize: none;
 }
 
 .keyboard {
@@ -61,6 +62,12 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+  transition: 0.3s all;
+}
+
+.keyboard__key:hover{
+  background-color: rgb(114, 203, 203);
+  cursor: pointer;
 }
 
 .Backspace,
@@ -131,6 +138,8 @@ body {
 }
 
 .active{
-    border-radius: 10px;
-    background-color: rgb(114, 203, 203);
+  border-radius: 10px;
+  background-color: rgb(114, 203, 203);
+  box-shadow: 0 2px #82bfbe8a;
+  transform: translateY(1px);
 }
