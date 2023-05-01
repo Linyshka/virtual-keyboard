@@ -1,0 +1,145 @@
+body {
+  font-family: "Ysabeau", sans-serif;
+  font-size: 10px;
+  font-style: normal;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: rgb(15, 102, 102);
+  font-style: italic;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.text-area {
+  width: 85%;
+  height: 12.3rem;
+  font-size: 1.2rem;
+  resize: none;
+}
+
+.keyboard {
+  width: 800px;
+  height: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgba(51, 85, 85, 0.922);
+  margin-top: 5px;
+  border-radius: 0.3rem;
+  padding: 5px;
+}
+
+.keyboard__row {
+  display: flex;
+  column-gap: 10px;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+}
+
+.keyboard__key {
+  filter: drop-shadow(0px 2px 2px black);
+  width: 50px;
+  height: 90%;
+  border-radius: 5%;
+  background-color: rgb(63, 78, 79);
+  font-style: normal;
+  font-size: 1.2rem;
+  display: flex;
+  flex: 1;
+  color: rgb(213, 252, 255);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: 0.3s all;
+}
+
+.keyboard__key:hover{
+  background-color: rgb(114, 203, 203);
+  cursor: pointer;
+}
+
+.Backspace,
+.CapsLock {
+  background-color: rgb(93, 136, 145);
+  flex: 2;
+}
+
+.Tab {
+  background-color: rgb(93, 136, 145);
+  flex: 1.3;
+}
+
+.Delete {
+  background-color: rgb(93, 136, 145);
+  flex: 1.4;
+}
+
+.Enter {
+  background-color: rgb(93, 136, 145);
+  flex: 2.2;
+}
+
+.ShiftLeft,
+.ShiftRight {
+  background-color: rgb(93, 136, 145);
+  flex: 2.4;
+}
+
+.ControlLeft,
+.MetaLeft,
+.AltLeft,
+.AltRight,
+.ControlRight {
+  background-color: rgb(93, 136, 145);
+}
+
+.Space {
+  width: 375px;
+  flex: 8.1;
+}
+
+.ArrowUp,
+.ArrowDown,
+.ArrowLeft,
+.ArrowRight {
+  background-color: rgb(93, 136, 145);
+  width: 50px;
+  flex: 1.1;
+}
+
+.lang-info,
+.system-info {
+  margin: 20px 0;
+  padding: 0;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.6rem;
+  color: rgb(11, 79, 79);
+}
+
+.lang-info {
+  margin-top: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.active{
+  border-radius: 10px;
+  background-color: rgb(114, 203, 203);
+  box-shadow: 0 2px #82bfbe8a;
+  transform: translateY(1px);
+}
